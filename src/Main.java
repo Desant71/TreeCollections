@@ -6,7 +6,6 @@ public class Main {
         List<Person> noblePeople = new ArrayList<>();
         noblePeople.add(new Person("Nikita", "Filyakin", 29));
         noblePeople.add(new Person("Marfa", "Makarova St Stepanenko", 18));
-        noblePeople.add(new Person("Andrei", "Pop Fm", 25));
         noblePeople.add(new Person("Natasha", "Pop Fm St", 54));
         noblePeople.add(new Person("Sasha", "Maza Kaka", 26));
 
