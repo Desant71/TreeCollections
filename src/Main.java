@@ -9,7 +9,23 @@ public class Main {
         noblePeople.add(new Person("Natasha", "Pop Fm St", 54));
         noblePeople.add(new Person("Sasha", "Maza Kaka", 26));
 
-        noblePeople.sort(new WordsInSurname(3));
-        System.out.println(noblePeople);
+
+        noblePeople.sort((n1, n2) -> {
+            String[] ar1 = n1.getSurname().split(" ");
+            String[] ar2 = n2.getSurname().split(" ");
+
+            int firstLength = ar1.length;
+            int secondLength = ar2.length;
+
+            if (firstLength < secondLength) {
+                return -1;
+            }
+            if (firstLength > secondLength) {
+                return 1;
+            }
+            return n1.getAge() - n2.getAge();
+        });
+        noblePeople.forEach(System.out::println);
     }
 }
+
